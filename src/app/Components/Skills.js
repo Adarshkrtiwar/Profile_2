@@ -1,5 +1,5 @@
 'use client';
-
+import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
@@ -283,25 +283,27 @@ const Skills = () => {
               className="flex flex-wrap justify-center gap-6 md:gap-10"
               variants={containerVariants}
             >
-              {versionControl.map((item) => (
-                <motion.div
-                  key={item.id}
-                  className="flex flex-col items-center p-4 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10 hover:border-green-400/50 transition-all duration-300"
-                  whileHover={{ scale: 1.05 }}
-                  variants={itemVariants}
-                >
-                  <div className="w-16 h-16 md:w-20 md:h-20 bg-white/10 rounded-full flex items-center justify-center mb-3">
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="w-10 h-10 md:w-12 md:h-12 object-contain"
-                    />
-                  </div>
-                  <h4 className="text-center text-base md:text-lg font-medium text-white">
-                    {item.title}
-                  </h4>
-                </motion.div>
-              ))}
+             {versionControl.map((item) => (
+  <motion.div
+    key={item.id}
+    className="flex flex-col items-center p-4 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10 hover:border-green-400/50 transition-all duration-300"
+    whileHover={{ scale: 1.05 }}
+    variants={itemVariants}
+  >
+    <div className="w-16 h-16 md:w-20 md:h-20 bg-white/10 rounded-full flex items-center justify-center mb-3">
+      <Image
+        src={item.image}
+        alt={item.title}
+        width={48}  // Adjust these values as needed
+        height={48} // Adjust these values as needed
+        className="w-10 h-10 md:w-12 md:h-12 object-contain"
+      />
+    </div>
+    <h4 className="text-center text-base md:text-lg font-medium text-white">
+      {item.title}
+    </h4>
+  </motion.div>
+))}
             </motion.div>
           </motion.div>
         </motion.div>

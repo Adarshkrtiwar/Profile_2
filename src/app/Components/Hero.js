@@ -170,7 +170,8 @@ const Hero = () => {
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.3 }}
           >
-            Hello , I'm{' '}
+            Hello, I&apos;m{' '}
+
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-400 animate-text-shimmer bg-[length:200%_100%]">
               Adarsh
             </span>

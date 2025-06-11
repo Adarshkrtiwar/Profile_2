@@ -126,24 +126,25 @@ const About = () => {
           About Me
         </motion.h2>
 
-        <motion.p
-          className="text-lg sm:text-xl lg:text-2xl text-gray-200 leading-relaxed"
-          variants={textVariants}
-        >
-          Hi there! I'm a seasoned Front-End Developer with expertise in UI/UX design, staying updated on industry trends. I'm passionate about crafting exceptional web experiences and proficient in Front-End Technologies. Additionally, I can handle MERN stack technologies. I thrive on challenges, love collaborative projects, and invite you to explore my portfolio. Let's connect for exciting web development opportunities!
-        </motion.p>
+       <motion.p
+  className="text-lg sm:text-xl lg:text-2xl text-gray-200 leading-relaxed"
+  variants={textVariants}
+>
+  Hi there! I&apos;m a seasoned Front-End Developer with expertise in UI/UX design, staying updated on industry trends. I&apos;m passionate about crafting exceptional web experiences and proficient in Front-End Technologies. Additionally, I can handle MERN stack technologies. I thrive on challenges, love collaborative projects, and invite you to explore my portfolio. Let&apos;s connect for exciting web development opportunities!
+</motion.p>
 
-        <Link href="/contact">
-          <motion.button
-            className="relative px-8 py-3 text-lg font-semibold rounded-full bg-gradient-to-r from-green-400 to-teal-500 text-white shadow-xl overflow-hidden group"
-            variants={buttonVariants}
-            whileHover="hover"
-            whileTap="tap"
-          >
-            <span className="relative z-10">Let's Connect</span>
-            <span className="absolute inset-0 bg-gradient-to-r from-teal-500 to-green-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-          </motion.button>
-        </Link>
+
+       <Link href="/contact">
+  <motion.button
+    className="relative px-8 py-3 text-lg font-semibold rounded-full bg-gradient-to-r from-green-400 to-teal-500 text-white shadow-xl overflow-hidden group"
+    variants={buttonVariants}
+    whileHover="hover"
+    whileTap="tap"
+  >
+    <span className="relative z-10">Let&apos;s Connect</span>
+    <span className="absolute inset-0 bg-gradient-to-r from-teal-500 to-green-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+  </motion.button>
+</Link>
       </motion.div>
     </motion.section>
   );
