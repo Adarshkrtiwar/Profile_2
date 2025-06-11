@@ -3,32 +3,59 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-// Mock project data (replace with your actual projectsDetails from utils/constants)
+// Project data (same as before)
 const projectsDetails = [
   {
     id: 1,
-    title: "E-Commerce Platform",
-    description: "A fully responsive e-commerce site built with Next.js and MERN stack.",
-    description1: "Features user authentication, product filtering, and payment integration.",
-    description2: "Deployed on Vercel with a focus on performance and UI/UX.",
+    title: "YouTube Clone",
+    description: "A YouTube clone with video streaming, search, and playlists.",
+    description1: "Built with React, Next.js, TypeScript, and Tailwind CSS.",
+    description2: "Integrated YouTube API for video data and playback.",
+    githubLink: "https://github.com/Adarshkrtiwar/you_tube",
   },
   {
     id: 2,
-    title: "Portfolio Website",
-    description: "A modern portfolio showcasing my skills and projects.",
-    description1: "Built with Next.js, Tailwind CSS, and Framer Motion.",
-    description2: "Includes smooth animations and dark mode support.",
+    title: "Job Board Platform",
+    description: "A modern job board with search, filters, and job applications.",
+    description1: "Developed using Next.js, React, TypeScript, and Tailwind CSS.",
+    description2: "Backend powered by Supabase for job data management.",
+    githubLink: "https://github.com/Adarshkrtiwar/job-board",
   },
   {
     id: 3,
-    title: "Task Management App",
-    description: "A task management app with real-time updates.",
-    description1: "Developed using React, Node.js, and MongoDB.",
-    description2: "Focus on intuitive UI/UX design.",
+    title: "E-Commerce Platform",
+    description: "A fully responsive e-commerce site with product filtering.",
+    description1: "Built with Next.js, MERN stack, and Stripe for payments.",
+    description2: "Deployed on Vercel with a focus on performance and UI/UX.",
+    githubLink: "https://github.com/Adarshkrtiwar/e-commerce-platform",
+  },
+  {
+    id: 4,
+    title: "Weather App",
+    description: "A weather forecasting app with real-time updates.",
+    description1: "Developed using React, TypeScript, and OpenWeather API.",
+    description2: "Styled with Tailwind CSS for a clean, responsive UI.",
+    githubLink: "https://github.com/Adarshkrtiwar/weather-app",
+  },
+  {
+    id: 5,
+    title: "Chat Application",
+    description: "A real-time chat app with user authentication.",
+    description1: "Built with React, Firebase, and Tailwind CSS.",
+    description2: "Supports messaging with real-time updates.",
+    githubLink: "https://github.com/Adarshkrtiwar/chat-app",
+  },
+  {
+    id: 6,
+    title: "Expense Tracker",
+    description: "A financial app to track expenses and generate reports.",
+    description1: "Developed with Next.js, React, TypeScript, and Chart.js.",
+    description2: "Uses LocalStorage for data persistence.",
+    githubLink: "https://github.com/Adarshkrtiwar/expense-tracker",
   },
 ];
 
-// Animation variants
+// Animation variants (unchanged)
 const sectionVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -182,9 +209,15 @@ const Projects = () => {
             >
               <h3 className="text-xl md:text-2xl font-semibold text-white mb-3">{project.title}</h3>
               <p className="text-sm md:text-base text-gray-200 mb-4">{project.description}</p>
-              <span className="text-teal-400 hover:text-teal-300 text-sm md:text-base font-medium">
+              <a
+                href={project.githubLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-teal-400 hover:text-teal-300 text-sm md:text-base font-medium cursor-pointer"
+                onClick={(e) => e.stopPropagation()} // Prevent modal from opening when clicking the link
+              >
                 View Details →
-              </span>
+              </a>
             </motion.div>
           ))}
         </div>
@@ -206,7 +239,7 @@ const Projects = () => {
               initial="hidden"
               animate="visible"
               exit="exit"
-              onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside modal
+              onClick={(e) => e.stopPropagation()}
             >
               {/* Close Button */}
               <button
@@ -223,7 +256,7 @@ const Projects = () => {
                 <p className="leading-[25px] text-[16px] mb-2">{selectedProject.description1}</p>
               )}
               {selectedProject.description2 && (
-                <p className="leading-[25px] text-[16px]">{selectedProject.description2}</p>
+                <p className="leading-[25px] text-[16px] mb-2">{selectedProject.description2}</p>
               )}
             </motion.div>
           </motion.div>
