@@ -14,8 +14,8 @@ import Contact from './components/Contact';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'My Portfolio',
-  description: 'Portfolio of a web developer',
+  title: 'Adarsh Portfolio',
+  description: 'Portfolio of a Software  developer',
 };
 
 export default function RootLayout({
