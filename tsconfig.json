@@ -28,7 +28,7 @@
     "**/*.ts",
     "**/*.tsx",
     "next-env.d.ts",
-    "src/app/Components/Skills.js",
+    "src/app/components/Skills.js",
     ".next/types/**/*.ts"
   ],
   "exclude": [

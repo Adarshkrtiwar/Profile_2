@@ -1,15 +1,15 @@
 import './globals.css';
 import { Inter } from 'next/font/google';
-import Navbar from './Components/Navbar';
-import Hero from './Components/Hero';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
 import { ThemeProvider } from 'next-themes';
-import About from './Components/About';
-import WhatIOffer from './Components/WhatIOffer';
-import Experience from './Components/Experience';
-import Projects from './Components/Projects';
-import Skills from './Components/Skills';
-import Footer from './Components/Footer';
-import Contact from './Components/Contact';
+import About from './components/About';
+import WhatIOffer from './components/WhatIOffer';
+import Experience from './components/Experience';
+import Projects from './components/Projects';
+import Skills from './components/Skills';
+import Footer from './components/Footer';
+import Contact from './components/Contact';
 
 const inter = Inter({ subsets: ['latin'] });
 
